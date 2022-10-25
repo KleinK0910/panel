@@ -1,0 +1,26 @@
+name: glaciers
+description: Glaciers explorer using Datashader and Panel
+channels:
+- pyviz
+packages: &id001
+- python=3.7
+- bokeh=2.2.3
+- notebook=5.7.8
+- pyviz_comms=2.0.0
+- datashader=0.11.1
+- holoviews=1.14.1
+- panel=0.10.2
+- spatialpandas=0.3.6
+dependencies: *id001
+commands:
+  dashboard:
+    unix: panel serve glaciers.ipynb
+    supports_http_options: true
+  notebook:
+    notebook: glaciers.ipynb
+env_specs:
+  default: {}
+platforms:
+- linux-64
+- osx-64
+- win-64
